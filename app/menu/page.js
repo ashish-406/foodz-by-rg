@@ -3,7 +3,7 @@ import MenuContent from '@/components/MenuContent';
 export const metadata = {
   title: 'Menu | Foodz by RG',
   description:
-    'Burgers, sides, drinks and combos. View the full Foodz by RG menu at Riverside Shopping Centre, Mauritius.',
+    'Full menu of Foodz by RG — Royal Indian Cuisine and Fuzzion street food. Curries, tandoori, noodles, wraps, mocktails and more. 100% Halal.',
 };
 
 export default function MenuPage() {

@@ -92,7 +92,7 @@ export default function ContactContent() {
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Foodz by RG — Riverside Shopping Centre"
+                title="Foodz by RG — Royal Road, Rivière du Rempart"
               />
             </div>
           </AnimateOnScroll>

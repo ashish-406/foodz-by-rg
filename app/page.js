@@ -8,7 +8,7 @@ import ContactContent from '@/components/ContactContent';
 export const metadata = {
   title: 'Foodz by RG | Real Food. Real Fast.',
   description:
-    'Best fast food in Rivière du Rempart, Mauritius. Fresh burgers, sides, drinks & combos at Riverside Shopping Centre.',
+    'Foodz by RG — authentic North Indian curries, tandoori, and Fuzzion street food. Royal Road, Rivière du Rempart, Mauritius. 100% Halal.',
 };
 
 export default function HomePage() {

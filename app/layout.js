@@ -18,10 +18,10 @@ const dmSans = DM_Sans({
 
 export const metadata = {
   title: 'Foodz by RG | Real Food. Real Fast.',
-  description: 'Fresh, fast, and full of flavour. Best burgers, sides & combos at Riverside Shopping Centre, Rivière du Rempart, Mauritius.',
+  description: 'Authentic Indian cuisine and Fuzzion street food on Royal Road, Rivière du Rempart, Mauritius. 100% Halal.',
   openGraph: {
     title: 'Foodz by RG',
-    description: 'Real Food. Real Fast. Best fast food in Rivière du Rempart, Mauritius.',
+    description: 'Authentic Indian cuisine and Fuzzion street food. Royal Road, Rivière du Rempart, Mauritius.',
     siteName: 'Foodz by RG',
     locale: 'en_MU',
     type: 'website',

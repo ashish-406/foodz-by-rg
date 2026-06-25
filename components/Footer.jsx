@@ -1,11 +1,10 @@
-import Link from 'next/link';
 import { Camera, Globe, Phone } from 'lucide-react';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/menu', label: 'Menu' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/contact', label: 'Contact' },
+  { href: '#', label: 'Home' },
+  { href: '#menu', label: 'Menu' },
+  { href: '#gallery', label: 'Gallery' },
+  { href: '#find-us', label: 'Find Us' },
 ];
 
 export default function Footer() {
@@ -16,7 +15,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <p className="font-display text-3xl text-flame mb-3">FOODZ BY RG</p>
             <p className="font-body text-white/40 text-sm leading-relaxed max-w-xs">
-              Real food, real fast. Find us at Riverside Shopping Centre, Rivière du Rempart, Mauritius.
+              Real food, real fast. Find us on Royal Road, Rivière du Rempart, Mauritius.
             </p>
           </div>
 
@@ -25,12 +24,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {navLinks.map(({ href, label }) => (
                 <li key={href}>
-                  <Link
+                  <a
                     href={href}
                     className="font-body text-white/40 text-sm hover:text-flame transition-colors"
                   >
                     {label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -59,7 +58,7 @@ export default function Footer() {
                 <Globe size={20} />
               </a>
               <a
-                href="https://wa.me/23000000000"
+                href="https://wa.me/23057591140"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -69,8 +68,8 @@ export default function Footer() {
               </a>
             </div>
             <p className="font-body text-white/40 text-sm leading-relaxed">
-              Riverside Shopping Centre<br />
-              Rivière du Rempart<br />
+              Royal Road<br />
+              Rivière du Rempart 31113<br />
               Mauritius
             </p>
           </div>
