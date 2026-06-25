@@ -20,7 +20,7 @@ export default function AboutStrip() {
               BORN LOCAL.<br />MADE BOLD.
             </h2>
             <p className="font-body text-deep-black/60 text-lg leading-relaxed max-w-lg">
-              Nestled in Riverside Shopping Centre, Foodz by RG is where Mauritius comes to eat.
+              Right on Royal Road in Rivière du Rempart, Foodz by RG is where Mauritius comes to eat.
               Two concepts under one roof — The Royal Indian Cuisine and Fuzzion Street Food —
               brought together by bold flavours, fresh ingredients, and a kitchen that never cuts corners.
             </p>

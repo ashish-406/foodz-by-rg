@@ -19,7 +19,7 @@ export default function Hero() {
         >
           <div className="w-10 h-px bg-flame/40" />
           <span className="font-body text-white/35 text-xs tracking-[0.3em] uppercase">
-            Riverside Shopping Centre · Rivière du Rempart · Mauritius
+            Royal Road · Rivière du Rempart · Mauritius
           </span>
           <div className="w-10 h-px bg-flame/40" />
         </motion.div>

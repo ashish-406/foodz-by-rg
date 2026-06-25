@@ -5,9 +5,13 @@ import { MapPin, Clock, Phone, Send, CheckCircle } from 'lucide-react';
 import AnimateOnScroll from './AnimateOnScroll';
 
 const hours = [
-  { day: 'Monday – Friday', time: '10:00 – 22:00' },
-  { day: 'Saturday', time: '09:00 – 23:00' },
-  { day: 'Sunday', time: '10:00 – 21:00' },
+  { day: 'Monday', time: '11:00 – 21:00' },
+  { day: 'Tuesday', time: '11:00 – 21:00' },
+  { day: 'Wednesday', time: '11:00 – 21:00' },
+  { day: 'Thursday', time: '11:00 – 21:00' },
+  { day: 'Friday', time: '11:00 – 21:00' },
+  { day: 'Saturday', time: '11:00 – 21:00' },
+  { day: 'Sunday', time: '11:00 – 21:00' },
 ];
 
 export default function ContactContent() {
@@ -41,8 +45,8 @@ export default function ContactContent() {
                 <div>
                   <p className="font-body font-semibold text-white text-sm mb-1">Address</p>
                   <p className="font-body text-white/45 text-sm leading-relaxed">
-                    Riverside Shopping Centre<br />
-                    Rivière du Rempart, Mauritius
+                    Royal Road<br />
+                    Rivière du Rempart 31113, Mauritius
                   </p>
                 </div>
               </div>
@@ -69,7 +73,7 @@ export default function ContactContent() {
                 <div>
                   <p className="font-body font-semibold text-white text-sm mb-1">WhatsApp</p>
                   <a
-                    href="https://wa.me/23000000000"
+                    href="https://wa.me/23057591140"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-body text-flame text-sm hover:underline"

@@ -44,7 +44,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://wa.me/23000000000"
+              href="https://wa.me/23057591140"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-flame text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-orange-600 transition-colors"
@@ -77,7 +77,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://wa.me/23000000000"
+              href="https://wa.me/23057591140"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-flame text-white font-body font-semibold px-5 py-3 rounded-full text-center hover:bg-orange-600 transition-colors"
