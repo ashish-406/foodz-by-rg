@@ -2,80 +2,73 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const slots = [
   {
     id: 1,
     span: 'md:col-span-2 md:row-span-2',
-    concept: 'Royal Indian Cuisine',
+    src: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=900&h=900&auto=format&fit=crop&q=80',
+    alt: 'Indian food platter',
     label: 'The Signature Experience',
-    gradient: 'from-orange-900 via-red-800 to-rose-900',
-    dot: 'bg-orange-400',
-    text: 'text-orange-300',
+    concept: 'Royal Indian Cuisine',
   },
   {
     id: 2,
     span: '',
-    concept: 'Tandoori',
+    src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&auto=format&fit=crop&q=80',
+    alt: 'Grilled tandoori dish',
     label: 'Clay Oven Perfection',
-    gradient: 'from-red-900 via-orange-800 to-amber-900',
-    dot: 'bg-red-400',
-    text: 'text-red-300',
+    concept: 'Tandoori',
   },
   {
     id: 3,
     span: '',
-    concept: 'Curry',
+    src: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&auto=format&fit=crop&q=80',
+    alt: 'Indian curry and spices',
     label: 'Rich & Aromatic',
-    gradient: 'from-amber-900 via-yellow-800 to-orange-900',
-    dot: 'bg-amber-400',
-    text: 'text-amber-300',
+    concept: 'Curry',
   },
   {
     id: 4,
     span: '',
-    concept: 'Fuzzion',
-    label: 'Street Food Vibes',
-    gradient: 'from-violet-900 via-purple-800 to-indigo-900',
-    dot: 'bg-violet-400',
-    text: 'text-violet-300',
+    src: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&auto=format&fit=crop&q=80',
+    alt: 'Biryani rice dish',
+    label: 'Fragrant Basmati',
+    concept: 'Biryani',
   },
   {
     id: 5,
     span: '',
-    concept: 'Noodles & Rice',
-    label: 'Mine, Meefon & Riz Frite',
-    gradient: 'from-teal-900 via-cyan-800 to-sky-900',
-    dot: 'bg-teal-400',
-    text: 'text-teal-300',
+    src: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&auto=format&fit=crop&q=80',
+    alt: 'Colourful food bowl',
+    label: 'Mine, Meefon & Riz',
+    concept: 'Fuzzion Plates',
   },
   {
     id: 6,
     span: 'md:col-span-2',
-    concept: 'The Spread',
+    src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&h=400&auto=format&fit=crop&q=80',
+    alt: 'Food spread',
     label: 'Two concepts. One roof. Endless flavour.',
-    gradient: 'from-zinc-800 via-stone-700 to-neutral-800',
-    dot: 'bg-zinc-400',
-    text: 'text-zinc-300',
+    concept: 'The Spread',
   },
   {
     id: 7,
     span: '',
-    concept: 'Mocktails',
+    src: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&h=400&auto=format&fit=crop&q=80',
+    alt: 'Fresh drinks and mocktails',
     label: 'Virgin Mojito & More',
-    gradient: 'from-pink-900 via-rose-800 to-fuchsia-900',
-    dot: 'bg-pink-400',
-    text: 'text-pink-300',
+    concept: 'Mocktails',
   },
   {
     id: 8,
     span: '',
-    concept: '100% Halal',
-    label: 'No Pork · No Beef',
-    gradient: 'from-green-900 via-emerald-800 to-teal-900',
-    dot: 'bg-green-400',
-    text: 'text-green-300',
+    src: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&h=400&auto=format&fit=crop&q=80',
+    alt: 'Indian naan bread',
+    label: 'Baked in the Tandoor',
+    concept: 'Naan & Bread',
   },
 ];
 
@@ -86,6 +79,7 @@ export default function GalleryContent() {
     <>
       <div className="bg-deep-black py-24 px-4">
         <div className="max-w-6xl mx-auto">
+
           <div className="mb-14">
             <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">Food &amp; Vibes</p>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -102,46 +96,44 @@ export default function GalleryContent() {
                 className="font-body text-white/30 text-xs hover:text-flame transition-colors flex items-center gap-2 self-start sm:self-auto"
               >
                 <span className="w-1 h-1 rounded-full bg-flame" />
-                Follow @_foodzbyrg for real food shots
+                Follow @_foodzbyrg on Instagram
               </a>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[180px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[220px]">
             {slots.map((slot) => (
               <motion.div
                 key={slot.id}
-                className={`${slot.span} relative overflow-hidden rounded-xl cursor-pointer group bg-gradient-to-br ${slot.gradient}`}
+                className={`${slot.span} relative overflow-hidden rounded-xl cursor-pointer group`}
                 onClick={() => setActive(slot)}
                 whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.25 }}
               >
-                {/* Dark overlay on hover */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300" />
-
-                {/* Subtle noise texture */}
-                <div
-                  className="absolute inset-0 opacity-20"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%)',
-                  }}
+                <Image
+                  src={slot.src}
+                  alt={slot.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
 
-                {/* Text content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-5">
-                  <span className={`font-body text-[9px] uppercase tracking-[0.25em] ${slot.text} mb-1.5 opacity-70 group-hover:opacity-100 transition-opacity`}>
-                    {slot.concept}
-                  </span>
-                  <span className="font-display text-white leading-tight" style={{ fontSize: 'clamp(0.85rem, 2vw, 1.1rem)' }}>
-                    {slot.label}
-                  </span>
-                </div>
+                {/* Gradient overlay — always visible at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-                {/* Flame accent corner dot */}
-                <div className={`absolute top-4 right-4 w-1.5 h-1.5 rounded-full ${slot.dot} opacity-60 group-hover:opacity-100 transition-opacity`} />
+                {/* Text */}
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="font-body text-[9px] uppercase tracking-[0.25em] text-flame mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {slot.concept}
+                  </p>
+                  <p className="font-display text-white leading-tight" style={{ fontSize: 'clamp(0.75rem, 1.8vw, 1rem)' }}>
+                    {slot.label}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
 
@@ -156,38 +148,35 @@ export default function GalleryContent() {
             onClick={() => setActive(null)}
           >
             <button
-              className="absolute top-5 right-5 text-white/40 hover:text-white transition-colors"
+              className="absolute top-5 right-5 text-white/50 hover:text-white transition-colors z-10"
               onClick={() => setActive(null)}
               aria-label="Close"
             >
               <X size={28} />
             </button>
+
             <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.92, opacity: 0 }}
-              className={`w-80 rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br ${active.gradient}`}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="relative w-full max-w-2xl rounded-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="p-8 flex flex-col gap-3">
-                <span className={`font-body text-[9px] uppercase tracking-[0.3em] ${active.text}`}>
-                  {active.concept}
-                </span>
-                <p className="font-display text-3xl text-white leading-tight">{active.label}</p>
-                <div className="h-px bg-white/10 my-2" />
-                <p className="font-body text-white/40 text-xs leading-relaxed">
-                  Real food photos coming soon. Follow us on Instagram for a taste of what we serve daily.
-                </p>
-                <a
-                  href="https://instagram.com/_foodzbyrg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-2 font-body text-xs font-semibold text-white/70 hover:text-white transition-colors"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <span className={`w-1.5 h-1.5 rounded-full ${active.dot}`} />
-                  @_foodzbyrg
-                </a>
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={active.src.replace('w=600', 'w=1200').replace('w=900', 'w=1400')}
+                  alt={active.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 672px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="font-body text-flame text-xs uppercase tracking-widest mb-2">{active.concept}</p>
+                <p className="font-display text-white text-3xl leading-tight">{active.label}</p>
               </div>
             </motion.div>
           </motion.div>
