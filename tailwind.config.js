@@ -17,6 +17,12 @@ module.exports = {
         display: ['var(--font-bebas)', 'sans-serif'],
         body: ['var(--font-dm-sans)', 'sans-serif'],
       },
+      opacity: {
+        '6': '0.06',
+        '8': '0.08',
+        '12': '0.12',
+        '96': '0.96',
+      },
     },
   },
   plugins: [],

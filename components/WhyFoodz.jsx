@@ -4,16 +4,19 @@ import AnimateOnScroll from './AnimateOnScroll';
 const reasons = [
   {
     Icon: Leaf,
+    num: '01',
     title: 'Fresh Ingredients',
-    desc: 'We source quality produce daily so every bite is as good as it should be.',
+    desc: 'Quality produce sourced daily. Every dish made to order — nothing sits, nothing is rushed.',
   },
   {
     Icon: Zap,
+    num: '02',
     title: 'Fast Service',
-    desc: "We know you're hungry. Your order is ready in minutes, every single time.",
+    desc: 'We respect your time. Your order is ready in minutes, every single time.',
   },
   {
     Icon: MapPin,
+    num: '03',
     title: 'Local Flavours',
     desc: 'Mauritius-inspired touches in every dish. Taste the island in every bite.',
   },
@@ -21,21 +24,29 @@ const reasons = [
 
 export default function WhyFoodz() {
   return (
-    <section className="bg-soft-gray py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <AnimateOnScroll className="text-center mb-14">
-          <p className="font-body text-flame text-sm tracking-[0.3em] uppercase mb-3">The Foodz Promise</p>
-          <h2 className="font-display text-5xl sm:text-6xl text-white">WHY FOODZ?</h2>
+    <section className="bg-cream py-24 px-4">
+      <div className="max-w-6xl mx-auto">
+        <AnimateOnScroll className="mb-16">
+          <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">The Foodz Promise</p>
+          <h2
+            className="font-display text-deep-black leading-none"
+            style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)' }}
+          >
+            WHY FOODZ?
+          </h2>
         </AnimateOnScroll>
 
-        <div className="grid sm:grid-cols-3 gap-10">
-          {reasons.map(({ Icon, title, desc }, i) => (
-            <AnimateOnScroll key={title} delay={i * 0.15} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-flame/10 border border-flame/30 mb-6">
-                <Icon className="text-flame" size={28} />
+        <div className="grid sm:grid-cols-3 gap-px bg-deep-black/8">
+          {reasons.map(({ Icon, num, title, desc }, i) => (
+            <AnimateOnScroll key={title} delay={i * 0.1}>
+              <div className="bg-cream p-10">
+                <span className="font-display text-5xl text-flame/20 leading-none block mb-6">{num}</span>
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className="text-flame" size={20} />
+                  <h3 className="font-display text-xl text-deep-black">{title}</h3>
+                </div>
+                <p className="font-body text-deep-black/50 leading-relaxed text-sm">{desc}</p>
               </div>
-              <h3 className="font-display text-2xl text-white mb-3">{title}</h3>
-              <p className="font-body text-white/50 leading-relaxed">{desc}</p>
             </AnimateOnScroll>
           ))}
         </div>
