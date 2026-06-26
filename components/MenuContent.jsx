@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Download } from 'lucide-react';
 
 // ─── Royal Indian Cuisine ───────────────────────────────────────────────────
 
@@ -543,24 +544,35 @@ export default function MenuContent() {
           </div>
         </div>
 
-        {/* Main concept tabs */}
-        <div className="flex gap-3 mb-8">
-          {[
-            { id: 'royal', label: 'Royal Indian Cuisine' },
-            { id: 'fuzzion', label: 'Fuzzion Street Food' },
-          ].map(({ id, label }) => (
-            <button
-              key={id}
-              onClick={() => switchMain(id)}
-              className={`font-body font-semibold px-6 py-3 rounded-full text-sm transition-all ${
-                mainTab === id
-                  ? 'bg-flame text-white'
-                  : 'border border-white/15 text-white/40 hover:border-white/40 hover:text-white/70'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+        {/* Main concept tabs + download */}
+        <div className="flex items-center justify-between gap-4 mb-8">
+          <div className="flex gap-3">
+            {[
+              { id: 'royal', label: 'Royal Indian Cuisine' },
+              { id: 'fuzzion', label: 'Fuzzion Street Food' },
+            ].map(({ id, label }) => (
+              <button
+                key={id}
+                onClick={() => switchMain(id)}
+                className={`font-body font-semibold px-6 py-3 rounded-full text-sm transition-all ${
+                  mainTab === id
+                    ? 'bg-flame text-white'
+                    : 'border border-white/15 text-white/40 hover:border-white/40 hover:text-white/70'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <a
+            href="/menu.pdf"
+            download
+            className="flex-none inline-flex items-center gap-2 border border-flame text-flame font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-flame/10 transition-colors"
+          >
+            <Download size={15} />
+            <span className="hidden sm:inline">Download Menu</span>
+            <span className="sm:hidden">PDF</span>
+          </a>
         </div>
 
         {/* Sub-category pill nav */}
