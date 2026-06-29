@@ -9,6 +9,7 @@ export const metadata = {
   title: 'Foodz by RG | Real Food. Real Fast.',
   description:
     'Foodz by RG — authentic North Indian curries, tandoori, and Fuzzion street food. Royal Road, Rivière du Rempart, Mauritius. 100% Halal.',
+  alternates: { canonical: '/' },
 };
 
 export default function HomePage() {

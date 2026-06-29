@@ -33,7 +33,7 @@ export default function Hero() {
             animate={{ y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            FOODZ
+            Foodz <span className="text-orange-500">by RG</span>
           </motion.h1>
         </div>
 
