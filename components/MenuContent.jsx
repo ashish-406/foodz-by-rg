@@ -527,7 +527,7 @@ export default function MenuContent() {
 
         {/* Header */}
         <div className="mb-12">
-          <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">What We Serve</p>
+          <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">Royal Indian Cuisine &amp; Fuzzion Street Food</p>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5">
             <h2
               className="font-display text-white leading-none"

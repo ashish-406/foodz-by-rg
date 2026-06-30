@@ -81,7 +81,7 @@ export default function GalleryContent() {
         <div className="max-w-6xl mx-auto">
 
           <div className="mb-14">
-            <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">Food &amp; Vibes</p>
+            <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">Indian &amp; Fuzzion Food</p>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <h2
                 className="font-display text-white leading-none"
@@ -114,6 +114,7 @@ export default function GalleryContent() {
                   src={slot.src}
                   alt={slot.alt}
                   fill
+                  priority={slot.id === 1}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />

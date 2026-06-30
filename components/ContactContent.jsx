@@ -27,7 +27,7 @@ export default function ContactContent() {
     <div className="bg-soft-gray py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <AnimateOnScroll className="mb-14">
-          <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">Get In Touch</p>
+          <p className="font-body text-flame text-xs tracking-[0.35em] uppercase mb-4">Royal Road · Rivière du Rempart</p>
           <h2
             className="font-display text-white leading-none"
             style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)' }}
